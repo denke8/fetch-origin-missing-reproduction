@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Small project for quickly testing Cypress.io test runner",
   "scripts": {
+    "start": "start-server-and-test website:serve http://localhost:3000 cypress:open",
+    "website:serve": "static-server -p 3000 public",
     "cypress:run": "cypress run",
     "cypress:open": "cypress open",
     "cypress:verify": "cypress verify",
@@ -17,7 +19,10 @@
   "author": "Gleb Bahmutov <gleb@cypress.io>",
   "license": "ISC",
   "devDependencies": {
-    "ok-file": "1.5.2"
+    "cypress": "^10.7.0",
+    "ok-file": "1.5.2",
+    "start-server-and-test": "^1.14.0",
+    "static-server": "^2.2.1"
   },
   "repository": {
     "type": "git",
